@@ -1,0 +1,81 @@
+/**
+ * Herbalist
+ * Herbalist – is a website template created for selling the cannabis, medical marijuana and CBD products, cannabis blogging and others
+ * Exclusively on https://1.envato.market/herbalist-html
+ *
+ * @encoding        UTF-8
+ * @version         1.0.4
+ * @copyright       (C) 2018 - 2022 Merkulove ( https://merkulov.design/ ). All rights reserved.
+ * @license         Envato License https://1.envato.market/KYbje
+ * @contributors    Lamber Lilit (winter.rituel@gmail.com)
+ * @support         help@merkulov.design
+ **/
+// page header
+
+.page {
+    &_main {
+        padding: 60px 0;
+        background: url("../img/placeholder.jpg") center no-repeat / cover;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    &_header {
+        margin-bottom: 15px;
+    }
+
+    &_text {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    &_breadcrumbs {
+        position: relative;
+        padding-bottom: 15px;
+
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 2px;
+            background: $secondary;
+        }
+
+        &-item {
+            font-family: $accentFont;
+
+            &:not(.current) {
+                margin-right: 10px;
+
+                .link {
+                    position: relative;
+                    font-weight: 700;
+                    color: $secondary;
+
+                    &:after {
+                        content: '/';
+                        margin-left: 10px;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+// media queries
+
+@media screen and (min-width: 991.98px) {
+    .page {
+        &_main {
+            padding: 80px 0 90px;
+            margin-bottom: 40px;
+        }
+
+        &_breadcrumbs {
+            padding-bottom: 20px;
+        }
+    }
+}

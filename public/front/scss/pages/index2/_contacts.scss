@@ -1,0 +1,225 @@
+/**
+ * Herbalist
+ * Herbalist – is a website template created for selling the cannabis, medical marijuana and CBD products, cannabis blogging and others
+ * Exclusively on https://1.envato.market/herbalist-html
+ *
+ * @encoding        UTF-8
+ * @version         1.0.4
+ * @copyright       (C) 2018 - 2022 Merkulove ( https://merkulov.design/ ). All rights reserved.
+ * @license         Envato License https://1.envato.market/KYbje
+ * @contributors    Lamber Lilit (winter.rituel@gmail.com)
+ * @support         help@merkulov.design
+ **/
+// contacts section
+
+.contacts {
+    &_header {
+        text-align: center;
+        margin-bottom: 30px;
+
+        &-title {
+            margin-bottom: 15px;
+        }
+
+        &-text {
+            max-width: 552px;
+            margin: 0 auto;
+        }
+    }
+
+    &_cards {
+        &-item {
+            margin-bottom: 30px;
+            text-align: center;
+
+            .icon {
+                font-size: 24px;
+
+                &.icon-check {
+                    font-size: 19px;
+                }
+            }
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+
+            &[data-order="2"] {
+                .contacts_cards-item_wrapper {
+                    background: $primary;
+                    box-shadow: 1px 2px 15px rgba(33, 72, 66, 0.07);
+                    color: #fff;
+                    text-align: left;
+
+                    .title {
+                        color: inherit;
+                        text-align: center;
+                    }
+
+                    .list {
+                        &-item {
+                            margin-bottom: 10px;
+
+                            &:last-of-type {
+                                margin-bottom: 0;
+                            }
+
+                            .icon {
+                                color: $accent;
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &_wrapper {
+                box-shadow: 0 0 15px rgba($secondary, 0.1);
+                border-radius: 16px;
+                color: $primary;
+                padding: 30px;
+
+                .title {
+                    margin-bottom: 15px;
+                }
+
+                .info {
+                    .icon {
+                        margin-bottom: 10px;
+                    }
+                }
+
+                .text {
+                    margin-top: 20px;
+                    font-size: 14px;
+                    color: $text;
+                }
+            }
+        }
+    }
+}
+
+// media queries
+
+@media screen and (min-width: 575.98px) {
+    .contacts {
+        &_cards {
+            &-item {
+                text-align: left;
+
+                &[data-order="2"] {
+                    .contacts_cards-item_wrapper {
+                        .title {
+                            text-align: left;
+                        }
+                    }
+                }
+
+                &_wrapper {
+                    .info {
+                        .icon {
+                            margin-bottom: 0;
+                            margin-right: 10px;
+                        }
+
+                        .linebreak {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 767.98px) {
+    .contacts {
+        &_header {
+            text-align: left;
+
+            &-text {
+                margin: unset;
+            }
+        }
+
+        &_cards {
+            margin: 0 -15px;
+
+            &-item {
+                padding: 0 15px;
+
+                &[data-order="1"] {
+                    order: 1;
+                }
+
+                &[data-order="2"] {
+                    order: 3;
+                    margin-bottom: 0;
+                }
+
+                &[data-order="3"] {
+                    order: 2;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 991.98px) {
+    .contacts {
+        &_header {
+            margin-bottom: 40px;
+        }
+
+        &_cards {
+            margin: 0 -20px;
+
+            &-item {
+                padding: 0 20px;
+
+                &_wrapper {
+                    padding: 40px;
+                }
+
+                &[data-order="3"] {
+                    margin-bottom: 40px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1199.98px) {
+    .contacts {
+        &_header {
+            text-align: center;
+
+            &-text {
+                margin: 0 auto;
+            }
+        }
+
+        &_cards {
+            margin: 0 -20px;
+
+            &-item {
+                padding: 0 20px;
+                margin-bottom: 0;
+
+                &_wrapper {
+                    height: 100%;
+                }
+
+                &[data-order="2"] {
+                    order: 2;
+                }
+
+                &[data-order="3"] {
+                    margin-bottom: 0;
+                    order: 3;
+                }
+            }
+        }
+    }
+}

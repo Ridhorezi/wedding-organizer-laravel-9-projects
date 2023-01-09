@@ -1,0 +1,257 @@
+/**
+ * Herbalist
+ * Herbalist – is a website template created for selling the cannabis, medical marijuana and CBD products, cannabis blogging and others
+ * Exclusively on https://1.envato.market/herbalist-html
+ *
+ * @encoding        UTF-8
+ * @version         1.0.4
+ * @copyright       (C) 2018 - 2022 Merkulove ( https://merkulov.design/ ). All rights reserved.
+ * @license         Envato License https://1.envato.market/KYbje
+ * @contributors    Lamber Lilit (winter.rituel@gmail.com)
+ * @support         help@merkulov.design
+ **/
+// single post main content
+
+.post {
+    &_header {
+        &--main {
+            margin: 0 0 15px;
+        }
+    }
+
+    .socials {
+        margin-top: 30px;
+    }
+
+    &_main {
+        .metadata {
+            margin-bottom: 20px;
+        }
+    }
+
+    &_quote {
+        text-align: left;
+
+        &-author {
+            position: relative;
+            padding-bottom: 15px;
+
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 80px;
+                height: 2px;
+                background: $secondary;
+            }
+        }
+    }
+
+    &_media {
+        margin: 20px 0;
+
+        &-img {
+            margin-bottom: 20px;
+            border-radius: 16px;
+            overflow: hidden;
+            max-height: 280px;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &_list {
+
+        &-item {
+            .number {
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        }
+    }
+}
+
+.comments {
+    &_item {
+        padding-top: 30px;
+
+        &[data-order="1"] {
+            padding-top: 0;
+            border: none;
+        }
+
+        border-top: 1px solid $gray;
+    }
+}
+
+.reply {
+    padding-bottom: 60px;
+}
+
+// media queries
+
+@media screen and (min-width: 575.98px) {
+    .post {
+        &_main {
+            .metadata {
+                &_item {
+                    &-text {
+                        display: inline;
+                    }
+
+                    &-number {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 767.98px) {
+    .post {
+        &_media {
+            margin: 30px 0;
+            &-img {
+                width: calc(50% - 15px);
+                margin-bottom: 0;
+            }
+        }
+
+        .socials, &_tags {
+            margin: 0;
+        }
+
+        .wrapper--tags {
+            margin-top: 60px;
+        }
+
+        .widgets {
+            width: 50%;
+        }
+    }
+}
+
+@media screen and (min-width: 991.98px) {
+    .post {
+        &_content {
+            width: calc(100% - 450px);
+        }
+
+        &_header {
+            &--main {
+                margin: 0 0 30px;
+            }
+        }
+
+        .wrapper--tags {
+            margin-top: 80px;
+        }
+
+        .socials {
+            margin-top: 30px;
+        }
+
+        &_main {
+            .metadata {
+                margin-bottom: 30px;
+            }
+        }
+
+        &_quote {
+            text-align: left;
+
+            &-author {
+                position: relative;
+                padding-bottom: 15px;
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 80px;
+                    height: 2px;
+                    background: $secondary;
+                }
+            }
+        }
+
+        &_media {
+            margin: 30px 0;
+
+            &-img {
+                margin-bottom: 20px;
+                border-radius: 16px;
+                overflow: hidden;
+                max-height: 280px;
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        &_list {
+
+            &-item {
+                .number {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                }
+            }
+        }
+    }
+    .widgets {
+        max-width: 420px;
+    }
+    .comments {
+        &_item {
+            .main {
+                .panel {
+                    &_timestamp {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+    }
+    .reply {
+        padding-bottom: 0;
+    }
+}
+
+@media screen and (min-width: 1199.98px) {
+    .post {
+        &_content {
+            width: calc(100% - 480px);
+        }
+
+        .socials {
+            margin-top: 0;
+        }
+
+        .wrapper--lists {
+            .post_list {
+                width: calc(50% - 20px);
+            }
+        }
+
+    }
+    .comments {
+        &_item {
+            .main {
+                .panel {
+                    &_timestamp {
+                        margin-left: 30px;
+                    }
+                }
+            }
+        }
+    }
+}

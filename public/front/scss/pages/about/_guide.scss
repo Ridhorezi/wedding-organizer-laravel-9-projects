@@ -1,0 +1,191 @@
+/**
+ * Herbalist
+ * Herbalist – is a website template created for selling the cannabis, medical marijuana and CBD products, cannabis blogging and others
+ * Exclusively on https://1.envato.market/herbalist-html
+ *
+ * @encoding        UTF-8
+ * @version         1.0.4
+ * @copyright       (C) 2018 - 2022 Merkulove ( https://merkulov.design/ ). All rights reserved.
+ * @license         Envato License https://1.envato.market/KYbje
+ * @contributors    Lamber Lilit (winter.rituel@gmail.com)
+ * @support         help@merkulov.design
+ **/
+// guide section
+
+.guide {
+    background: $pastelYellow;
+
+    &_media {
+        position: relative;
+        margin-top: 30px;
+
+        &-img {
+            mix-blend-mode: darken;
+        }
+
+        .underlay {
+            position: absolute;
+            width: 450px;
+            height: 515px;
+            display: block;
+            bottom: 0;
+
+            &_circle {
+                position: absolute;
+                width: 324px;
+                height: 324px;
+                filter: blur(136px);
+                display: block;
+
+                &--accent {
+                    left: 0;
+                    bottom: 0;
+                    background: rgba(239, 195, 104, 0.1);
+                }
+            }
+        }
+    }
+
+    &_main {
+        &-header {
+            margin-bottom: 30px;
+
+            &_title {
+                margin-bottom: 15px;
+            }
+        }
+
+        &-list {
+            &_item {
+                margin-bottom: 20px;
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+
+                .step {
+                    background: $accent;
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    margin-bottom: 20px;
+                    font-family: $accentFont;
+                    font-weight: 800;
+                    font-size: 28px;
+                    line-height: 28px;
+                    color: $primary;
+                }
+
+                .wrapper {
+                    width: calc(100% - 80px);
+                    margin-top: 2px;
+
+                    .text {
+                        max-width: 360px;
+                    }
+                }
+            }
+        }
+
+        &-secondary {
+            margin-top: 30px;
+
+            &_item {
+                &:first-of-type {
+                    margin-bottom: 20px;
+                }
+
+                .title {
+                    margin-bottom: 10px;
+                }
+
+
+                .icon {
+                    background: $secondary;
+                    color: #fff;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    font-size: 20px;
+                    transition: all .3s ease-in-out;
+                    margin-right: 15px;
+                }
+
+                .link {
+                    font-family: $accentFont;
+                    font-weight: 800;
+                    font-size: 17px;
+                    color: $primary;
+                }
+
+                &:hover {
+                    .icon {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+
+        &-list, &-secondary {
+            font-size: 14px;
+            line-height: 22px;
+        }
+    }
+}
+
+// media queries
+
+@media screen and (min-width: 575.98px) {
+    .guide {
+        &_media {
+            margin-top: 0;
+        }
+        &_main {
+            &-secondary {
+                &_item {
+                    width: calc(50% - 15px);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 991.98px) {
+    .guide {
+        &_media {
+            flex-grow: 1;
+        }
+    }
+}
+
+@media screen and (min-width: 1399.98px) {
+    .guide {
+        position: relative;
+        &_media {
+            position: absolute;
+            left: 0;
+            min-width: 50%;
+        }
+    }
+}
+
+@media screen and (min-width: 1799.98px) {
+    .guide {
+        &_media {
+            left: 5%;
+        }
+    }
+}
+
+@media screen and (min-width: 1999.98px) {
+    .guide {
+        &_media {
+            left: 10%;
+            img {
+                height: 690px;
+                width: auto;
+            }
+        }
+    }
+}
+

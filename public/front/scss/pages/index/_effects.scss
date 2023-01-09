@@ -1,0 +1,239 @@
+/**
+ * Herbalist
+ * Herbalist – is a website template created for selling the cannabis, medical marijuana and CBD products, cannabis blogging and others
+ * Exclusively on https://1.envato.market/herbalist-html
+ *
+ * @encoding        UTF-8
+ * @version         1.0.4
+ * @copyright       (C) 2018 - 2022 Merkulove ( https://merkulov.design/ ). All rights reserved.
+ * @license         Envato License https://1.envato.market/KYbje
+ * @contributors    Lamber Lilit (winter.rituel@gmail.com)
+ * @support         help@merkulov.design
+ **/
+// effects section
+
+.effects {
+    text-align: center;
+    position: relative;
+
+    .container {
+        position: relative;
+        z-index: 10;
+    }
+
+    &_underlay {
+        display: block;
+        position: absolute;
+        width: 470px;
+        height: 450px;
+        left: 37%;
+        bottom: 0;
+        z-index: 1;
+
+        &-circle {
+            display: block;
+            width: 384px;
+            height: 384px;
+            filter: blur(136px);
+            position: absolute;
+
+            &--green {
+                background: rgba(158, 188, 166, 0.2);
+                top: 0;
+                right: 0;
+            }
+
+            &--accent {
+                background: rgba(239, 195, 104, 0.1);
+                bottom: 0;
+                left: 0;
+            }
+        }
+    }
+
+    &_header {
+        margin-bottom: -25px;
+
+        .main {
+            position: relative;
+            z-index: 100;
+        }
+
+        &-title {
+            margin-bottom: 15px;
+        }
+
+        &-btn {
+            margin-top: 30px;
+        }
+
+        &-formula {
+            visibility: hidden;
+            height: 0;
+            color: $primaryHighlight;
+            display: inline-block;
+            margin: 0 auto;
+
+            svg {
+                margin: 0 auto;
+                display: block;
+                height: 0;
+            }
+        }
+    }
+
+    &_media {
+        border-radius: 16px;
+        overflow: hidden;
+        margin: 40px 0;
+        max-height: 400px;
+    }
+
+    &_list {
+        &-item {
+            text-align: center;
+            margin-bottom: 30px;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+
+            .icon {
+                border-radius: 50%;
+                color: $primary;
+                background: $accent;
+                width: 60px;
+                height: 60px;
+                font-size: 26px;
+            }
+
+            &_header {
+                margin: 10px 0 5px;
+            }
+        }
+    }
+}
+
+// media queries
+
+@media screen and (min-width: 575.98px) {
+    .effects {
+        text-align: left;
+
+
+        &_list {
+            &-item {
+                text-align: left;
+
+                .icon {
+                    margin-right: 20px;
+                }
+
+                &_header {
+                    margin: 0 0 10px;
+                }
+
+
+                .wrapper {
+                    width: calc(100% - 80px);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 767.98px) {
+    .effects {
+        &_header {
+            .main {
+                margin-bottom: 60px;
+            }
+        }
+
+        &_media, &_list {
+            width: calc(50% - 15px);
+        }
+
+        &_media {
+            margin: 0;
+        }
+    }
+}
+
+@media screen and (min-width: 991.98px) {
+    .effects {
+        &_header {
+            margin-bottom: 60px;
+            .main {
+                margin-bottom: 0;
+            }
+
+            &-title, &-text {
+                max-width: 500px;
+            }
+
+            &-formula {
+                visibility: visible;
+                width: unset;
+                height: unset;
+                margin-top: 0;
+
+                svg {
+                    height: unset;
+                    margin-left: auto;
+                    margin-top: 10px;
+                }
+            }
+
+        }
+
+        &_list, &_media {
+            width: calc(50% - 20px);
+        }
+
+        &_media {
+            margin: 0;
+        }
+    }
+}
+
+
+@media screen and (min-width: 1399.98px) {
+    .effects {
+        &_header {
+            max-width: 367px;
+            margin-bottom: 0;
+            position: relative;
+            height: 100%;
+            margin-right: 90px;
+
+            &-formula {
+                position: absolute;
+                top: 90%;
+                right: -20%;
+            }
+        }
+
+        &_list, &_media {
+            width: unset;
+        }
+
+        &_list {
+            flex: 0 0 auto;
+            width: 33.33333333%;
+            margin-left: 60px;
+        }
+
+        &_media {
+            margin: 0;
+            min-height: 540px;
+            flex-grow: 1;
+            aspect-ratio: 41 / 54;
+
+            img {
+                min-height: 540px;
+                width: auto;
+            }
+        }
+    }
+}

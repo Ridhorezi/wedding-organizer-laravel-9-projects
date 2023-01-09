@@ -1,0 +1,298 @@
+/**
+ * Herbalist
+ * Herbalist – is a website template created for selling the cannabis, medical marijuana and CBD products, cannabis blogging and others
+ * Exclusively on https://1.envato.market/herbalist-html
+ *
+ * @encoding        UTF-8
+ * @version         1.0.4
+ * @copyright       (C) 2018 - 2022 Merkulove ( https://merkulov.design/ ). All rights reserved.
+ * @license         Envato License https://1.envato.market/KYbje
+ * @contributors    Lamber Lilit (winter.rituel@gmail.com)
+ * @support         help@merkulov.design
+ **/
+// footer component
+
+.footer {
+    &_main {
+        background: $primary;
+        color: #fff;
+
+        &-header {
+            margin-bottom: 20px;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        &-block {
+            margin-bottom: 30px;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+
+        &-about {
+            &_brand {
+                margin-bottom: 10px;
+
+                svg {
+                    margin-right: 10px;
+                }
+            }
+
+            &_wrapper {
+
+                .text {
+                    margin: 5px 0 20px;
+                }
+
+                .socials {
+                    font-size: 22px;
+
+                    .list-item {
+                        margin-right: 25px;
+
+                        &:last-of-type {
+                            margin-right: 0;
+                        }
+
+                        .link .icon {
+                            display: inline-block;
+                            transition: all .3s ease-in;
+
+                            &:hover, &:focus {
+                                transform: scale(1.1);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &-contacts {
+            &_list {
+                .list-item {
+                    margin-bottom: 15px;
+
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
+
+                    .icon {
+                        border-radius: 50%;
+                        background: $accent;
+                        width: 35px;
+                        height: 35px;
+                        margin-right: 20px;
+                        color: $primary;
+                        font-size: 16px;
+                    }
+
+                    .link {
+                        &:hover, &:focus {
+                            color: $accent;
+                        }
+                    }
+                }
+            }
+        }
+
+        &-nav {
+            &_list {
+                .list-item {
+                    margin-bottom: 15px;
+                    width: 50%;
+                    padding-right: 10px;
+
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
+
+                    .icon {
+                        font-size: 16px;
+                        margin-right: 5px;
+                    }
+
+                    .link {
+                        &:hover, &:focus {
+                            color: $accent;
+                        }
+                    }
+                }
+            }
+        }
+
+        &-instagram {
+            &_list {
+                grid-template-rows: repeat(3, 1fr);
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 15px;
+                justify-content: center;
+
+                .link {
+                    border-radius: 8px;
+                    overflow: hidden;
+                    display: block;
+                    height: 115px;
+                    width: 100%;
+
+                    .preview {
+                        transition: all .5s ease-in-out;
+                        height: 100%;
+                    }
+
+                    &:hover, &:focus {
+                        .preview {
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &_secondary {
+        padding: 30px 0;
+        background-color: $pastelYellow;
+
+        &-copyright {
+            text-align: center;
+        }
+
+        &-list {
+            margin-bottom: 20px;
+
+            .list-item {
+                margin-right: 20px;
+
+                &:last-of-type {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+
+// media queries
+
+@media screen and (min-width: 575.98px) {
+    .footer {
+        &_main {
+            &-instagram {
+                &_list {
+                    grid-template-rows: repeat(2, 1fr);
+                    grid-template-columns: repeat(3, 1fr);
+
+                    .link {
+                        height: 140px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 767.98px) {
+    .footer {
+        &_main {
+            &-instagram {
+                &_list {
+                    .link {
+                        height: 93px;
+                    }
+                }
+            }
+
+            &-about {
+                margin-top: -18px;
+
+                &_brand {
+                    margin-left: -10px;
+                }
+
+                &_wrapper {
+
+                    .text {
+                        max-width: 260px;
+                    }
+                }
+            }
+
+            &-nav {
+                &_list {
+                    .list-item {
+                        width: unset;
+                    }
+                }
+            }
+        }
+
+        &_secondary {
+            &-copyright {
+                text-align: left;
+
+                .linebreak {
+                    display: block;
+                }
+            }
+
+            &-list {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 991.98px) {
+    .footer {
+        &_main {
+            &-about {
+                &_wrapper {
+                    .text {
+                        margin: 5px 0 50px;
+                    }
+                }
+            }
+
+            &-instagram {
+                &_list {
+                    grid-gap: 20px;
+                    .link {
+                        height: 120px;
+                    }
+                }
+            }
+        }
+
+        &_secondary {
+            padding: 40px 0;
+        }
+    }
+}
+
+@media screen and (min-width: 1199.98px) {
+    .footer {
+        &_main {
+            &-instagram {
+                max-width: 312px;
+
+                &_list {
+                    .list-item {
+                        height: 100px;
+                        .link {
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+        &_secondary {
+            &-copyright {
+                .linebreak {
+                    display: inline;
+                }
+            }
+        }
+    }
+}

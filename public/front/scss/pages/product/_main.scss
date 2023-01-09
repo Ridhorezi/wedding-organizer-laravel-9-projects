@@ -1,0 +1,833 @@
+/**
+ * Herbalist
+ * Herbalist – is a website template created for selling the cannabis, medical marijuana and CBD products, cannabis blogging and others
+ * Exclusively on https://1.envato.market/herbalist-html
+ *
+ * @encoding        UTF-8
+ * @version         1.0.4
+ * @copyright       (C) 2018 - 2022 Merkulove ( https://merkulov.design/ ). All rights reserved.
+ * @license         Envato License https://1.envato.market/KYbje
+ * @contributors    Lamber Lilit (winter.rituel@gmail.com)
+ * @support         help@merkulov.design
+ **/
+// product main content
+
+.about {
+    &_main {
+        overflow: visible;
+        margin-bottom: 40px;
+
+        &-slider {
+            margin-bottom: 30px;
+
+            &--single, &--thumbs {
+                .swiper-slide {
+                    border-radius: 16px;
+                    overflow: hidden;
+                }
+            }
+
+            &--single {
+                margin-bottom: 15px;
+                position: relative;
+
+                .swiper-controls {
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    z-index: 50;
+                    padding: 0 15px;
+
+                    .swiper-button-next,
+                    .swiper-button-prev {
+                        width: 40px;
+                        height: 40px;
+                        background: #fff;
+                        border-radius: 50%;
+                        font-size: 30px;
+                        transition: opacity .3s ease-in-out;
+
+                        .icon {
+                            position: relative;
+                        }
+
+                        &:hover {
+                            opacity: .7;
+                        }
+                    }
+
+                    .swiper-button-next .icon {
+                        right: -2px;
+                    }
+
+                    .swiper-button-prev .icon {
+                        left: -2px;
+                    }
+                }
+            }
+
+            &--thumbs {
+                .swiper-slide {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        &-info {
+            &_product {
+                margin-bottom: 20px;
+
+                .title {
+                    margin-bottom: 10px;
+                }
+
+                .action {
+
+                    &_link {
+                        background: #fff;
+                        box-shadow: 1px 2px 15px rgba(33, 72, 66, 0.07);
+                        width: 48px;
+                        height: 48px;
+                        border-radius: 50%;
+                        color: $accent;
+                        font-size: 20px;
+                        margin-right: 15px;
+
+                        &:last-of-type {
+                            margin-right: 0;
+                        }
+
+                        &:hover, &.active {
+                            background: $accent;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+
+            &_rating {
+                margin-bottom: 30px;
+                line-height: 1;
+
+                .stars {
+                    margin-right: 15px;
+
+                    &_star {
+                        margin-right: 10px;
+                        font-size: 20px;
+
+                        &:last-of-type {
+                            margin-right: 0;
+                        }
+                    }
+                }
+
+                .reviews-amount {
+                    font-size: 14px;
+                    line-height: 1;
+                }
+            }
+
+            &_buy {
+                .qty {
+                    margin-top: 0;
+                }
+
+                .btn {
+                    margin-left: 30px;
+                }
+            }
+
+            &_description {
+                margin-bottom: 30px;
+                color: $primary;
+            }
+
+            &_price {
+                display: inline-block;
+                color: $primary;
+                font-family: $accentFont;
+                font-size: 30px;
+                line-height: 1.3;
+                font-weight: 800;
+                margin-bottom: 20px;
+            }
+
+            &_list {
+                margin-top: 30px;
+
+                .list-item {
+                    margin-bottom: 10px;
+
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
+
+                    .property {
+                        color: $primary;
+                        font-family: $accentFont;
+                        font-weight: 700;
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+
+
+    }
+
+    &_secondary {
+        background: #fff;
+        box-shadow: 0 0 15px rgba(37, 143, 103, 0.1);
+        border-radius: 16px;
+        padding: 20px;
+
+        &-content {
+            margin-bottom: -15px;
+
+            &_nav {
+                display: none;
+            }
+
+            &_tabs {
+                .accordion_component-item_header {
+                    margin-bottom: 15px;
+                    cursor: pointer;
+                    transition: all .3s ease-in-out;
+
+                    &[aria-expanded="true"],
+                    &:hover, &:focus {
+                        color: $secondary;
+                    }
+
+                    .icon {
+                        transition: all .3s ease-in-out;
+                        display: block;
+
+                        &.transform {
+                            transform: rotate(180deg);
+                        }
+                    }
+                }
+
+
+                .tab-pane {
+                    padding: 0 0 15px;
+                    transition: all .3s ease;
+
+                    &#description {
+                        .text {
+                            margin-bottom: 15px;
+
+                            &:last-of-type {
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+
+                    &#reviews {
+                        .link,
+                        .label,
+                        .name {
+                            font-family: $accentFont;
+                            font-weight: 700;
+                            font-size: 17px;
+                            line-height: 1.3;
+                        }
+
+
+                        .rating {
+
+                            .star {
+                                font-size: 20px;
+                                transition: color .3s ease-in-out;
+                                color: $gray;
+                                cursor: pointer;
+                                margin-right: 10px;
+
+                                &:last-of-type {
+                                    margin-right: 0;
+                                }
+
+                                &.active {
+                                    color: $accent;
+                                }
+                            }
+                        }
+
+                        .reviews-section {
+                            &_list {
+                                .review {
+                                    margin-top: 30px;
+                                    padding-bottom: 20px;
+                                    border-bottom: 1px solid $gray;
+
+                                    &:first-of-type {
+                                        margin-top: 0;
+                                    }
+
+                                    &_header {
+                                        margin-bottom: 20px;
+
+                                        .name {
+                                            display: inline-block;
+                                            margin-bottom: 5px;
+                                        }
+
+                                        .rating .star {
+                                            color: $accent !important;
+                                        }
+
+                                        .timestamp {
+                                            display: inline-block;
+                                            margin-top: 10px;
+                                            font-size: 14px;
+                                            font-weight: 600;
+                                        }
+                                    }
+
+                                    &_main {
+                                        margin-bottom: 20px;
+                                    }
+
+                                    &_media {
+                                        margin-top: -10px;
+
+                                        &-item {
+                                            border-radius: 16px;
+                                            overflow: hidden;
+                                            width: calc(50% - 10px);
+                                            margin-top: 10px;
+                                        }
+                                    }
+
+                                    &_secondary {
+                                        &-block {
+                                            margin-bottom: 20px;
+
+                                            &:last-of-type {
+                                                margin-bottom: 0;
+                                            }
+
+                                            &_header {
+                                                display: inline-block;
+                                                font-weight: 500;
+                                                margin-bottom: 5px;
+                                            }
+                                        }
+                                    }
+
+                                    &_reply {
+                                        display: inline-block;
+                                        margin-top: 20px;
+                                    }
+                                }
+                            }
+                        }
+
+                        .form-section {
+                            margin-top: 60px;
+
+                            &_header {
+                                margin-bottom: 30px;
+                            }
+
+                            &_form {
+                                .label {
+                                    display: inline-block;
+                                    margin-bottom: 10px;
+                                    color: $primary;
+                                }
+
+                                .field {
+                                    border: 1px solid $gray;
+                                    border-radius: 24px;
+                                    width: 100%;
+                                    padding: 0 20px;
+                                    height: 48px;
+                                    font-size: 14px;
+                                    line-height: 22px;
+                                    transition: all .3s ease-in-out;
+
+                                    &--message {
+                                        height: 135px;
+                                        padding: 13px 20px;
+                                    }
+
+                                    &::placeholder {
+                                        transition: opacity .3s ease-in-out;
+                                    }
+
+                                    &:focus {
+                                        border-color: $primary;
+
+                                        &::placeholder {
+                                            opacity: 0;
+                                        }
+                                    }
+
+                                    &-wrapper:not(.fluid) {
+                                        margin-bottom: 15px;
+                                    }
+
+                                    &-wrapper {
+                                        &.fluid {
+                                            margin-bottom: -7px;
+                                        }
+                                    }
+                                }
+                            }
+
+                            &_footer {
+                                margin: 20px 0 30px;
+
+                                .link {
+                                    margin: 15px 0 20px;
+                                }
+
+                                .btn-wrapper {
+                                    &--underline {
+                                        margin: 15px 0 20px;
+                                    }
+
+                                    .btn {
+                                        width: 100%;
+                                        margin-top: 40px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &#additionalInfo {
+                        .table {
+                            border-collapse: collapse;
+                            margin-bottom: 15px;
+                            border-bottom: 1px solid $gray;
+
+                            &_row {
+
+                                &-header, &-cell {
+                                    width: 100%;
+                                    border: 1px solid $gray;
+                                    padding: 15px;
+                                    border-bottom: none;
+                                }
+
+                                &-header {
+                                    color: $primary;
+                                    font-family: $accentFont;
+                                    font-weight: 700;
+                                    text-align: left;
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// media queries
+
+@media screen and (min-width: 575.98px) {
+    .about {
+
+        &_main {
+            &-info {
+                &_product {
+                    .title {
+                        max-width: calc(100% - 131px);
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        &_secondary {
+            padding: 30px;
+
+            &-content {
+
+                &_tabs {
+
+                    .tab-pane {
+
+                        &#reviews {
+
+                            .reviews-section {
+                                &_list {
+                                    .review {
+                                        &_header {
+                                            .name {
+                                                width: 100%;
+                                            }
+
+                                            .timestamp {
+                                                margin-top: 0;
+                                                text-align: right;
+                                            }
+
+                                            .rating, .timestamp {
+                                                width: 50%;
+                                            }
+                                        }
+
+                                        &_media {
+                                            &-item {
+                                                width: 100px;
+                                                height: 100px;
+                                                margin-right: 20px;
+
+                                                &:last-of-type {
+                                                    margin-right: 0;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            .form-section {
+                                margin-top: 60px;
+
+                                &_header {
+                                    margin-bottom: 30px;
+                                }
+
+                                &_form {
+                                    .rating, .link {
+                                        margin: 0;
+                                    }
+
+                                    .btn {
+                                        margin-top: 30px;
+                                        width: fit-content !important;
+
+                                        &-wrapper {
+                                            min-width: 100%;
+                                        }
+                                    }
+
+                                }
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 767.98px) {
+    .about {
+
+        &_main {
+            &-slider {
+                &--single {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+
+        &_secondary {
+            &-content {
+                max-width: 893px;
+                margin: 0 auto;
+
+                &_nav {
+                    margin-bottom: 30px;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    border-bottom: 1px solid $primaryHighlight;
+
+                    .nav-item {
+                        width: calc(100% / 3);
+
+                        .nav-link {
+                            cursor: pointer;
+                            text-align: center;
+                            padding-bottom: 15px;
+                            position: relative;
+                            transition: color .3s ease-in-out;
+                            margin-bottom: -1px;
+                            font-family: $accentFont;
+                            font-weight: 700;
+                            font-size: 20px;
+                            line-height: 1.3;
+                            color: $primary;
+
+                            &:after {
+                                content: '';
+                                position: absolute;
+                                width: 0;
+                                height: 3px;
+                                bottom: 0;
+                                left: 0;
+                                background: $secondary;
+                                transition: width .3s ease-in-out;
+                            }
+
+                            &.active,
+                            &:hover, &:focus {
+                                color: $secondary;
+
+                                &:after {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &_tabs {
+                    .accordion_component-item_header {
+                        display: none !important;;
+                    }
+
+                    .tab-pane {
+                        padding: 0;
+
+                        &.fade {
+                            &:not(.show) {
+                                visibility: hidden;
+                                max-height: 0;
+                                overflow: hidden;
+                            }
+                        }
+
+                        &#reviews {
+
+                            .reviews-section {
+                                &_list {
+                                    .review {
+                                        &:first-of-type {
+                                            margin-top: 0;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .form-section {
+
+                                &_footer {
+                                    margin-bottom: 0;
+                                    margin-top: 30px;
+                                }
+
+                                &_form {
+
+                                    .btn {
+                                        margin-top: 30px;
+                                        width: fit-content !important;
+
+                                        &-wrapper {
+                                            &--underline {
+                                                min-width: unset;
+                                                max-width: 50%;
+                                                margin: 0;
+                                            }
+                                        }
+                                    }
+
+                                }
+
+                            }
+                        }
+
+                        &#additionalInfo {
+                            .table {
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@media screen and (min-width: 991.98px) {
+    .about {
+        &_main {
+            &-slider {
+                overflow: hidden;
+                width: calc(40% - 30px);
+
+                &--single {
+                    margin-bottom: 15px;
+                }
+            }
+
+            &-info {
+                width: 60%;
+                margin-left: 30px;
+
+                &_description {
+                    margin-bottom: 40px;
+                }
+
+                &_price {
+                    font-size: 36px;
+                    line-height: 1.2;
+                    margin-bottom: 30px;
+                }
+
+                &_list {
+                    margin-top: 40px;
+
+                    .list-item {
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+        }
+
+        &_secondary {
+            padding: 80px 0;
+
+            &-content {
+
+                &_nav {
+                    margin-bottom: 0;
+
+                    .nav-item {
+                        .nav-link {
+                            line-height: 1.1;
+                            font-size: 22px;
+                        }
+                    }
+                }
+
+                &_tabs {
+
+                    .tab-pane {
+                        padding: 0;
+                        transition: all .3s ease;
+
+                        &:not(.active) {
+                            max-height: 0;
+                            padding: 0;
+                            visibility: hidden;
+                        }
+
+                        &#description {
+                            margin-top: 30px;
+
+                            .text {
+                                margin-bottom: 15px;
+
+                                &:last-of-type {
+                                    margin-bottom: 0;
+                                }
+                            }
+                        }
+
+                        &#reviews {
+                            .reviews-section {
+                                margin-top: 40px;
+
+                                &_list {
+                                    .review {
+                                        margin-top: 40px;
+
+
+                                        &_secondary {
+                                            &-block {
+                                                width: 50%;
+
+                                                &_text {
+                                                    max-width: 310px;
+                                                }
+                                            }
+                                        }
+
+                                    }
+                                }
+                            }
+
+                            .form-section {
+
+                                &_header {
+                                    margin-bottom: 40px;
+                                }
+
+                                &_form {
+                                    .field {
+                                        &-wrapper {
+                                            width: calc(50% - 40px);
+
+                                            &.fluid {
+                                                min-width: 100%;
+                                            }
+                                        }
+
+
+                                        &-wrapper {
+                                            margin-bottom: 30px;
+                                        }
+                                    }
+                                }
+
+                                &_footer {
+                                    min-width: 100%;
+                                    margin: 30px 0 0;
+                                }
+                            }
+                        }
+
+                        &#additionalInfo {
+                            .table {
+                                margin-top: 60px;
+                                border-left: 1px solid $gray;
+
+                                &_row {
+                                    &-header, &-cell {
+                                        width: unset;
+                                        padding: 30px;
+                                        min-height: 110px;
+                                        border-left: none;
+                                    }
+
+                                    &-header {
+                                        width: 40%;
+                                    }
+
+                                    &-cell {
+                                        width: 60%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1199.98px) {
+    .about {
+        &_main {
+            &-slider {
+                width: calc(50% - 60px);
+
+                &--single {
+                    margin-bottom: 40px;
+                }
+            }
+
+            &-info {
+                width: 50%;
+                margin-left: 60px;
+            }
+        }
+    }
+}

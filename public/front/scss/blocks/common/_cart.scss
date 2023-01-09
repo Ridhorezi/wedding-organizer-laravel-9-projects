@@ -1,0 +1,235 @@
+/**
+ * Herbalist
+ * Herbalist – is a website template created for selling the cannabis, medical marijuana and CBD products, cannabis blogging and others
+ * Exclusively on https://1.envato.market/herbalist-html
+ *
+ * @encoding        UTF-8
+ * @version         1.0.4
+ * @copyright       (C) 2018 - 2022 Merkulove ( https://merkulov.design/ ). All rights reserved.
+ * @license         Envato License https://1.envato.market/KYbje
+ * @contributors    Lamber Lilit (winter.rituel@gmail.com)
+ * @support         help@merkulov.design
+ **/
+// cart offcanvas component
+
+.cartOffcanvas {
+    min-width: 320px;
+    max-width: 890px;
+    padding: 30px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: $secondary #fff;
+
+
+    /* Chrome, Edge, and Safari */
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #fff;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $secondary;
+        border-radius: 20px;
+        border: 0 solid #fff;
+    }
+
+    &_header {
+        margin-bottom: 30px;
+
+        &-close {
+            color: $gray;
+            font-size: 30px;
+            transition: color .3s ease-in-out;
+
+            &:hover, &:focus {
+                color: $primary;
+            }
+        }
+    }
+
+    &_body {
+        &-list {
+            &_item {
+                margin-bottom: 20px;
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+
+                .media {
+                    margin-bottom: 10px;
+                    border-radius: 16px;
+                    overflow: hidden;
+                }
+
+                .main {
+                    &_title, &_price {
+                        font-family: $accentFont;
+                        font-weight: 700;
+                        font-size: 20px;
+                        line-height: 1.3;
+                        width: 100%;
+                    }
+
+                    &_title {
+                        color: $primary;
+                    }
+
+                    &_price {
+                        color: $secondary;
+                        margin-top: 5px;
+                    }
+
+                    .btn--underline {
+                        color: $primaryHighlight;
+
+                        &:after {
+                            background: $primaryHighlight;
+                        }
+                    }
+                }
+            }
+        }
+
+        &-total {
+            font-family: $accentFont;
+            font-weight: 800;
+            color: $primary;
+            margin-top: 40px;
+            font-size: 24px;
+            line-height: 1.1;
+        }
+
+        &-btn {
+            width: 100%;
+            margin-top: 40px;
+        }
+    }
+
+}
+
+// media queries
+
+@media screen and (min-width: 575.98px) {
+    .cartOffcanvas {
+
+        &_body {
+            &-list {
+                &_item {
+
+                    .media {
+                        margin-bottom: 0;
+                        margin-right: 30px;
+                        width: 100px;
+                        height: 100px;
+
+                        img {
+                            height: 100%;
+                        }
+                    }
+
+                    .main {
+                        width: calc(100% - 130px);
+
+                        &_title, &_price {
+                            width: unset;
+                        }
+
+                        &_title {
+                            order: 1;
+                            flex-grow: 1;
+
+                            &-product {
+                                display: inline-block;
+                                max-width: 170px;
+                            }
+                        }
+
+                        &_price {
+                            order: 3;
+                            width: 50%;
+                        }
+
+                        .qty {
+                            order: 2;
+                            margin-top: 0;
+                        }
+
+                        .btn--underline {
+                            order: 4;
+                            margin-top: 10px;
+                        }
+                    }
+                }
+            }
+
+
+            &-btn {
+                width: fit-content;
+            }
+        }
+
+    }
+}
+
+@media screen and (min-width: 991.98px) {
+    .cartOffcanvas {
+        padding: 40px;
+        width: 100%;
+
+        &_header {
+            margin-bottom: 40px;
+        }
+
+        &_body {
+            &-list {
+                &_item {
+
+                    .media {
+                        width: 115px;
+                        height: 115px;
+                    }
+
+                    .main {
+                        width: calc(100% - 145px);
+
+                        &_title, &_price {
+                            font-size: 22px;
+                            line-height: 1.1;
+                        }
+
+                        &_title {
+                            order: 1;
+                            flex-grow: unset;
+
+                            &-product {
+                                max-width: 200px;
+                            }
+                        }
+
+                        &_price {
+                            order: 2;
+                            width: unset;
+                        }
+
+                        .qty {
+                            order: 3;
+                        }
+
+                        .btn--underline {
+                            margin-top: 0;
+                        }
+                    }
+                }
+            }
+
+            &-total {
+                font-size: 28px;
+                margin-top: 60px;
+            }
+        }
+    }
+}

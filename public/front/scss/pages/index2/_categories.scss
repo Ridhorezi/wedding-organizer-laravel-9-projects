@@ -1,0 +1,100 @@
+/**
+ * Herbalist
+ * Herbalist – is a website template created for selling the cannabis, medical marijuana and CBD products, cannabis blogging and others
+ * Exclusively on https://1.envato.market/herbalist-html
+ *
+ * @encoding        UTF-8
+ * @version         1.0.4
+ * @copyright       (C) 2018 - 2022 Merkulove ( https://merkulov.design/ ). All rights reserved.
+ * @license         Envato License https://1.envato.market/KYbje
+ * @contributors    Lamber Lilit (winter.rituel@gmail.com)
+ * @support         help@merkulov.design
+ **/
+// categories section
+
+.categories {
+    &_list {
+        margin: 0 -15px;
+
+        &-item {
+            padding: 0 15px;
+            margin-bottom: 30px;
+            text-align: center;
+
+            &[data-order="5"],
+            &[data-order="6"] {
+                margin-bottom: 0;
+            }
+
+            &_wrapper {
+                .media {
+                    position: relative;
+                    margin-bottom: 20px;
+                    border-radius: 16px;
+                    overflow: hidden;
+                    aspect-ratio: 1 / 1;
+
+                    .overlay {
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        top: 0;
+                        bottom: 0;
+                        background: rgba(33, 72, 66, 0.6);
+                        color: #fff;
+                        font-family: $accentFont;
+                        font-weight: 700;
+                        padding: 20px;
+                        transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+                        opacity: 0;
+                        visibility: hidden;
+                    }
+                }
+                &:hover {
+                    .overlay {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// media queries
+
+@media screen and (min-width: 767.98px) {
+    .categories {
+        &_list {
+
+            &-item {
+
+                &[data-order="4"] {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 991.98px) {
+    .categories {
+        &_list {
+            margin: 0 -20px;
+            &-item {
+                margin-bottom: 40px;
+                padding: 0 20px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1199.98px) {
+    .categories {
+        &_list {
+            &-item {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

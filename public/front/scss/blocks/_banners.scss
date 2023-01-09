@@ -1,0 +1,108 @@
+/**
+ * Herbalist
+ * Herbalist – is a website template created for selling the cannabis, medical marijuana and CBD products, cannabis blogging and others
+ * Exclusively on https://1.envato.market/herbalist-html
+ *
+ * @encoding        UTF-8
+ * @version         1.0.4
+ * @copyright       (C) 2018 - 2022 Merkulove ( https://merkulov.design/ ). All rights reserved.
+ * @license         Envato License https://1.envato.market/KYbje
+ * @contributors    Lamber Lilit (winter.rituel@gmail.com)
+ * @support         help@merkulov.design
+ **/
+// promo section
+
+.promo {
+    &_banner {
+        border-radius: 16px;
+        padding: 30px;
+
+        &--big {
+            color: #fff;
+            background: url("../img/placeholder.jpg") no-repeat center / cover;
+            margin-bottom: 30px;
+            .promo_banner-header {
+                color: inherit;
+            }
+
+            .btn {
+                margin-top: 30px;
+            }
+        }
+
+        &--small {
+            min-height: 250px;
+            background: url("../img/placeholder.jpg") no-repeat center / cover;
+
+            .btn {
+                margin-top: 15px;
+            }
+        }
+
+        &-text {
+            margin-top: 15px;
+        }
+
+    }
+}
+
+// media queries
+
+@media screen and (min-width: 575.98px) {
+    .promo {
+        &_banner {
+
+            &--small {
+                min-height: 250px;
+
+                .btn {
+                    margin-top: 30px;
+                }
+            }
+
+        }
+    }
+}
+
+@media screen and (min-width: 767.98px) {
+    .promo {
+        &_banner {
+            &--big {
+                width: calc(100% - 330px);
+                margin-bottom: 0;
+            }
+
+            &--small {
+                min-height: 250px;
+                width: 300px;
+                margin-left: 30px;
+            }
+
+            &-text {
+                max-width: 500px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 991.98px) {
+    .promo {
+        &_banner {
+            padding: 40px;
+
+            &--big {
+                width: unset;
+                flex-grow: 1;
+            }
+
+            &--small {
+                width: 428px;
+                margin-left: 40px;
+            }
+
+            &-header {
+                max-width: 310px;
+            }
+        }
+    }
+}

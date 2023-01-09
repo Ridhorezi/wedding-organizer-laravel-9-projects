@@ -1,0 +1,107 @@
+/**
+ * Herbalist
+ * Herbalist – is a website template created for selling the cannabis, medical marijuana and CBD products, cannabis blogging and others
+ * Exclusively on https://1.envato.market/herbalist-html
+ *
+ * @encoding        UTF-8
+ * @version         1.0.4
+ * @copyright       (C) 2018 - 2022 Merkulove ( https://merkulov.design/ ). All rights reserved.
+ * @license         Envato License https://1.envato.market/KYbje
+ * @contributors    Lamber Lilit (winter.rituel@gmail.com)
+ * @support         help@merkulov.design
+ **/
+// accordion section
+
+.accordion {
+    &_component {
+        max-width: 894px;
+        margin: 0 auto;
+
+        &-item {
+            margin-bottom: 30px;
+            box-shadow: 0 0 15px rgba($secondary, 0.1);
+            border-radius: 16px;
+            padding: 15px;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+
+            &_header {
+                transition: color .3s ease-in-out;
+                cursor: pointer;
+
+                &:not(.collapsed) {
+                    color: $secondary;
+                }
+
+                .icon {
+                    transition: all .3s ease-in-out;
+                    display: block;
+                    margin: 0 0 0 15px;
+
+                    &.transform {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+
+            &_body {
+                padding: 10px 0 0;
+            }
+        }
+    }
+
+}
+
+// media queries
+
+@media screen and (min-width: 575.98px) {
+    .accordion {
+        &_component {
+            &-item {
+                padding: 20px;
+
+                &_header {
+
+                    .icon {
+                        margin: 0 0 0 20px;
+
+                    }
+                }
+
+                &_body {
+                    padding: 20px 0 0;
+                }
+            }
+        }
+
+    }
+}
+
+@media screen and (min-width: 767.98px) {
+    .accordion {
+        &_component {
+            &-item {
+                padding: 20px 20px 20px 30px;
+
+                &_header {
+                    transition: padding-top .3s ease-in-out;
+                    &:not(.collapsed) {
+                        padding-top: 10px;
+                    }
+                    .icon {
+                        margin: 0 0 0 20px;
+
+                    }
+                }
+
+                &_body {
+                    padding: 20px 0 10px;
+                }
+            }
+        }
+
+    }
+}
+

@@ -1,0 +1,112 @@
+/**
+ * Herbalist
+ * Herbalist – is a website template created for selling the cannabis, medical marijuana and CBD products, cannabis blogging and others
+ * Exclusively on https://1.envato.market/herbalist-html
+ *
+ * @encoding        UTF-8
+ * @version         1.0.4
+ * @copyright       (C) 2018 - 2022 Merkulove ( https://merkulov.design/ ). All rights reserved.
+ * @license         Envato License https://1.envato.market/KYbje
+ * @contributors    Lamber Lilit (winter.rituel@gmail.com)
+ * @support         help@merkulov.design
+ **/
+// news page main content
+
+.news {
+    &_list {
+        &-item {
+            margin-bottom: 30px;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+
+            .media {
+                border-radius: 16px;
+                overflow: hidden;
+                max-height: 550px;
+                margin-bottom: 10px;
+            }
+
+            .main {
+                &_metadata {
+                    &-item {
+                        font-weight: 600;
+                        font-size: 14px;
+                        margin-right: 10px;
+
+                        &:last-of-type {
+                            margin-right: 0;
+                        }
+
+                        .icon {
+                            color: $secondary;
+                            margin-right: 5px;
+                        }
+                    }
+                }
+
+                &_title {
+                    margin: 10px 0;
+                }
+
+                &_text {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+}
+
+// media queries
+
+@media screen and (min-width: 767.98px) {
+    .news {
+        &_wrapper {
+            width: calc(100% - 350px);
+        }
+
+        &_list {
+            &-item {
+                margin-bottom: 40px;
+            }
+        }
+    }
+    .widgets {
+        max-width: 320px;
+
+    }
+    .pagination {
+        margin-bottom: 0 !important;
+    }
+}
+
+@media screen and (min-width: 991.98px) {
+    .news {
+        &_wrapper {
+            width: calc(100% - 380px);
+        }
+        &_list {
+            &-item {
+                margin-bottom: 60px;
+                .main {
+                    &_title {
+                        margin: 20px 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1199.98px) {
+    .news {
+        &_wrapper {
+            width: calc(100% - 480px);
+        }
+    }
+    .widgets {
+        max-width: 420px;
+
+    }
+}

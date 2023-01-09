@@ -1,0 +1,401 @@
+/**
+ * Herbalist
+ * Herbalist – is a website template created for selling the cannabis, medical marijuana and CBD products, cannabis blogging and others
+ * Exclusively on https://1.envato.market/herbalist-html
+ *
+ * @encoding        UTF-8
+ * @version         1.0.4
+ * @copyright       (C) 2018 - 2022 Merkulove ( https://merkulov.design/ ). All rights reserved.
+ * @license         Envato License https://1.envato.market/KYbje
+ * @contributors    Lamber Lilit (winter.rituel@gmail.com)
+ * @support         help@merkulov.design
+ **/
+// product main content
+
+.about {
+    &_main {
+        margin-bottom: 0;
+        overflow: visible;
+
+        &-slider {
+            position: relative;
+
+
+            .swiper-slide {
+                border-radius: 16px;
+                overflow: hidden;
+            }
+
+            .swiper-controls {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 50;
+                padding: 0 15px;
+
+                .swiper-button-next,
+                .swiper-button-prev {
+                    width: 40px;
+                    height: 40px;
+                    background: #fff;
+                    border-radius: 50%;
+                    font-size: 30px;
+                    transition: opacity .3s ease-in-out;
+
+                    .icon {
+                        position: relative;
+                    }
+
+                    &:hover {
+                        opacity: .7;
+                    }
+                }
+
+                .swiper-button-next .icon {
+                    right: -2px;
+                }
+
+                .swiper-button-prev .icon {
+                    left: -2px;
+                }
+            }
+        }
+
+        &-info {
+            &_list {
+                margin-bottom: 60px;
+
+                .column {
+                    margin-bottom: 10px;
+
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            &_price {
+                margin-bottom: 0;
+                margin-right: 30px;
+                line-height: 1;
+            }
+
+            &_block {
+                margin-bottom: 30px;
+
+                .title {
+                    margin-bottom: 15px;
+                }
+
+                .weight-list {
+                    margin-top: -10px;
+
+                    .list-item {
+                        margin: 10px 10px 0 0;
+
+                        &:last-of-type {
+                            margin: 10px 0 0;
+                        }
+                    }
+                }
+
+                [type="radio"] {
+                    position: absolute;
+                    left: -9999px;
+
+                    & + label {
+                        border: 1px solid $primaryHighlight;
+                        border-radius: 100px;
+                        padding: 10px 15px;
+                        display: block;
+                        transition: all .3s ease-in-out;
+                        cursor: pointer;
+                    }
+
+                    &:checked + label {
+                        border-color: $secondary;
+                        background: $secondary;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+
+    &_secondary {
+        padding: 0;
+        box-shadow: none;
+        border-radius: unset;
+
+        &-content {
+            &_tabs {
+                margin-bottom: -30px;
+
+                .accordion_component-item_header {
+                    padding: 0 0 15px;
+                    border-bottom: 1px solid $primaryHighlight;
+                    margin-bottom: 30px;
+                    transition: all .3s ease;
+
+                    &[aria-expanded="true"] {
+                        border-color: transparent;
+                        margin-bottom: 20px;
+                        padding: 0;
+                    }
+                }
+
+                .tab-pane {
+                    padding: 0 0 30px;
+                    .form-section {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// media queries
+
+@media screen and (min-width: 575.98px) {
+    .about {
+        &_main {
+            &-info {
+                &_block {
+                    .title {
+                        margin-bottom: 0;
+                        margin-right: 30px;
+                    }
+
+                    .qty {
+                        margin-top: 0;
+                    }
+
+                    .weight-list {
+                        .list-item {
+                            margin-right: 20px;
+                        }
+                    }
+                }
+
+                &_list {
+                    .column {
+                        width: calc(50% - 15px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 767.98px) {
+    .about {
+        &_main {
+
+            &-info {
+                &_product {
+                    .title {
+                        max-width: 100%;
+                        margin-bottom: 20px;
+                    }
+                }
+
+                &_block {
+                    .title {
+                        margin-bottom: 15px;
+                        margin-right: 0;
+                    }
+
+                    .weight-list {
+                        margin-top: -10px;
+
+                        .list-item {
+                            margin: 10px 10px 0 0;
+
+                            &:last-of-type {
+                                margin: 10px 0 0;
+                            }
+                        }
+                    }
+                }
+
+                &_list {
+                    .column {
+                        width: 100%;
+                    }
+                }
+            }
+
+            &-slider {
+                margin-bottom: 0;
+
+                .swiper-wrapper {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                .swiper-controls {
+                    display: none;
+                }
+
+                .swiper-slide {
+                    height: unset;
+                    margin-bottom: 40px;
+
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            &-slider {
+                width: calc(50% - 20px);
+            }
+        }
+
+        &_secondary {
+            &-content {
+                &_tabs {
+                    .accordion_component-item_header {
+                        display: flex !important;;
+                    }
+                }
+            }
+        }
+
+        &_wrapper {
+            width: calc(50% - 20px);
+            transition: top .4s ease-in-out;
+        }
+    }
+}
+
+@media screen and (min-width: 991.98px) {
+    .about {
+        &_main {
+            &-info {
+                width: 100%;
+                margin-left: 0;
+
+                &_list {
+                    margin: 60px 0;
+                }
+            }
+
+            &-slider {
+                width: calc(50% - 30px);
+            }
+        }
+
+        &_secondary {
+            &-content {
+                &_tabs {
+                    margin-bottom: -30px;
+
+                    .tab-pane {
+                        padding: 0 0 30px !important;
+
+                        &:not(.active) {
+                            max-height: unset;
+                            padding: unset;
+                            visibility: unset;
+                        }
+
+                        &#additionalInfo {
+                            .table {
+                                margin-top: 0;
+                            }
+                        }
+
+                        &#reviews {
+                            .reviews-section {
+                                margin-top: 0;
+                            }
+                            .form-section {
+                                &_form {
+                                    .field-wrapper {
+                                        width: calc(50% - 15px);
+                                    }
+                                }
+                            }
+                        }
+
+                        &#description {
+                            margin-top: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        &_wrapper {
+            width: calc(50% - 30px);
+        }
+    }
+}
+
+@media screen and (min-width: 1199.98px) {
+    .about {
+        &_main {
+
+            &-slider {
+                width: 500px;
+            }
+
+            &-info {
+                &_product {
+                    .title {
+                        margin-bottom: 0;
+                        max-width: calc(100% - 131px);
+                    }
+                }
+
+                &_block {
+                    .title {
+                        margin-bottom: 0;
+                        margin-right: 30px;
+                    }
+
+                    .weight-list {
+                        margin-top: -20px;
+
+                        .list-item {
+                            margin: 20px 20px 0 0;
+
+                            &:last-of-type {
+                                margin: 20px 0 0;
+                            }
+                        }
+                    }
+                }
+
+                &_list {
+                    .column {
+                        width: calc(50% - 15px);
+                    }
+                }
+            }
+        }
+
+        &_wrapper {
+            width: calc(100% - 560px);
+        }
+    }
+}
+
+@media screen and (min-width: 1399.98px) {
+    .about {
+        &_main {
+
+            &-slider {
+                width: 640px;
+            }
+        }
+
+        &_wrapper {
+            width: calc(100% - 700px);
+        }
+    }
+}

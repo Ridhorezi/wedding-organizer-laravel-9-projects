@@ -1,0 +1,441 @@
+/**
+ * Herbalist
+ * Herbalist – is a website template created for selling the cannabis, medical marijuana and CBD products, cannabis blogging and others
+ * Exclusively on https://1.envato.market/herbalist-html
+ *
+ * @encoding        UTF-8
+ * @version         1.0.4
+ * @copyright       (C) 2018 - 2022 Merkulove ( https://merkulov.design/ ). All rights reserved.
+ * @license         Envato License https://1.envato.market/KYbje
+ * @contributors    Lamber Lilit (winter.rituel@gmail.com)
+ * @support         help@merkulov.design
+ **/
+// shop sidebar component
+
+.shop {
+
+    &_aside {
+        display: flex;
+        flex-direction: column;
+        margin: 0 -12px;
+
+
+        &-block {
+            padding: 0 12px;
+
+            margin-bottom: 30px;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+
+            &_header {
+                margin-bottom: 20px;
+
+                .leaf {
+                    margin-right: 10px;
+                }
+            }
+
+            .form {
+                &--search {
+                    position: relative;
+
+                    .field {
+                        width: 100%;
+                        border: 1px solid #C8C8C8;
+                        border-radius: 24px;
+                        padding: 10px 120px 10px 20px;
+                        height: 48px;
+                        transition: all .3s ease-in-out;
+
+                        &::placeholder {
+                            transition: opacity .3s ease-in-out;
+                        }
+
+                        &:focus {
+                            border-color: $primary;
+
+                            &::placeholder {
+                                opacity: 0;
+                            }
+                        }
+                    }
+
+                    .btn {
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        right: 0;
+                    }
+                }
+            }
+
+            &--categories, &--types, &--thc, &--cbd {
+                .list {
+                    &-item {
+                        margin-bottom: 10px;
+
+                        &:last-of-type {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+
+                [type="radio"] {
+                    position: absolute;
+                    left: -9999px;
+
+                    & + label {
+                        position: relative;
+                        padding-left: 26px;
+                        cursor: pointer;
+                        display: inline-block;
+                        transition: color .4s ease-in-out;
+
+                        &:hover {
+                            color: $primary;
+                        }
+                    }
+
+                    &:checked + label {
+                        color: $primary;
+                    }
+
+                    &:checked + label:before,
+                    &:not(:checked) + label:before {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 50%;
+                        width: 16px;
+                        height: 16px;
+                        border-radius: 50%;
+                        transform: translateY(-50%);
+                    }
+
+                    &:checked + label:before {
+                        border: 1px solid $secondary;
+                    }
+
+                    &:not(:checked) + label:before {
+                        border: 1px solid $primaryHighlight;
+                    }
+
+                    &:checked + label:after,
+                    &:not(:checked) + label:after {
+                        content: '';
+                        width: 10px;
+                        height: 10px;
+                        background: $secondary;
+                        position: absolute;
+                        top: 50%;
+                        left: 4px;
+                        border-radius: 50%;
+                        transition: all .3s ease-in-out;
+                    }
+
+                    &:not(:checked) + label:after {
+                        opacity: 0;
+                        transform: scale(0) translateY(-50%);
+                    }
+
+                    &:checked + label:after {
+                        opacity: 1;
+                        transform: scale(1) translateY(-50%);
+                    }
+                }
+            }
+
+            &--price {
+                .range-slider {
+                    position: relative;
+                    background: none;
+                    box-shadow: none;
+                    border-radius: unset;
+                    border: none;
+                    height: 10px;
+
+                    .noUi {
+
+                        &-base {
+                            height: 3px;
+                            background: #ccc;
+                        }
+
+                        &-handle {
+                            width: 10px;
+                            height: 10px;
+                            background: $secondary;
+                            border-radius: 50%;
+                            border: none;
+                            box-shadow: none;
+                            top: -4px;
+                            cursor: pointer;
+
+                            &-lower {
+                                left: 99%;
+                            }
+
+                            &-upper {
+                                right: -2px;
+                            }
+
+                            &:after, &:before {
+                                display: none;
+                            }
+                        }
+
+                        &-connect {
+                            background: $secondary;
+                            height: 3px;
+                        }
+
+                        &-connects {
+                            border-radius: 0;
+                        }
+
+
+                        &-origin {
+                            transform: none;
+                        }
+                    }
+
+                }
+
+                .range-output {
+                    input {
+                        max-width: 100px;
+
+                        &#priceMax {
+                            text-align: right;
+                        }
+                    }
+                }
+            }
+
+            &--sale {
+                position: relative;
+                background: $pastelYellow;
+                border-radius: 24px;
+                overflow: hidden;
+                padding: 30px;
+
+                .leaf {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    height: 152px;
+                    width: 158px;
+                    z-index: 1;
+                }
+
+                .content {
+                    position: relative;
+                    z-index: 10;
+
+                    .shop_aside-block_header {
+                        margin-bottom: 5px;
+                    }
+
+                    .shop_aside-block_text {
+                        margin-bottom: 20px;
+                        font-size: 14px;
+                    }
+
+                    .shop_aside-block_timer {
+                        margin-bottom: 20px;
+
+                        .timer {
+                            &_block {
+                                border: 1px solid $primaryHighlight;
+                                border-radius: 8px;
+                                padding: 10px;
+                                color: $secondary;
+                                font-family: $accentFont;
+                                font-weight: 700;
+                                font-size: 20px;
+                                line-height: 1.3;
+                            }
+
+                            &_separator {
+                                margin: 0 10px;
+
+                                .dot {
+                                    background: $primaryHighlight;
+                                    width: 3px;
+                                    height: 3px;
+                                    border-radius: 50%;
+                                    display: block;
+
+                                    &:first-of-type {
+                                        margin-bottom: 10px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &--weight {
+                .list {
+                    margin-top: -10px;
+
+                    &-item {
+                        margin: 10px 10px 0 0;
+
+                        &:last-of-type {
+                            margin: 10px 0 0;
+                        }
+                    }
+                }
+
+                [type="radio"] {
+                    position: absolute;
+                    left: -9999px;
+
+                    & + label {
+                        border: 1px solid $primaryHighlight;
+                        border-radius: 100px;
+                        padding: 10px 15px;
+                        display: block;
+                        transition: all .3s ease-in-out;
+                        cursor: pointer;
+                    }
+
+                    &:checked + label {
+                        border-color: $secondary;
+                        background: $secondary;
+                        color: #fff;
+                    }
+                }
+            }
+
+            &--categories {
+                padding-top: 30px;
+            }
+
+            &:last-of-type {
+                padding-bottom: 30px;
+                background: #fff;
+                z-index: 2;
+                position: relative;
+            }
+
+            &--sale, &--search {
+                display: none;
+            }
+        }
+    }
+}
+
+// media queries
+
+@media screen and (min-width: 767.98px) {
+    .shop {
+
+        &_aside {
+            margin: 0 0 0 -12px;
+            max-width: unset;
+            width: calc(100% + 24px);
+
+            &-wrapper {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: baseline;
+                justify-content: space-between;
+            }
+
+            &-block {
+                width: 50%;
+                padding: 0 30px;
+
+                &--thc {
+                    background: #fff;
+                    position: relative;
+                    z-index: 2;
+                    margin-bottom: 0;
+                    padding-bottom: 30px;
+                }
+
+            }
+        }
+
+    }
+}
+
+@media screen and (min-width: 991.98px) {
+    .shop {
+
+        &_aside {
+            order: unset;
+            grid-area: 1 / 2 / 5 / 3;
+            min-width: 290px;
+            max-width: 290px;
+            margin-right: 12px;
+            align-items: flex-end;
+
+
+            &-wrapper {
+                display: flex !important;
+                flex-direction: column;
+                padding: 0;
+                width: 290px;
+                margin-right: -12px;
+            }
+
+            &-block {
+                margin-bottom: 60px;
+                width: 100%;
+                padding: 0;
+
+                &_header {
+                    margin-bottom: 30px;
+
+                }
+
+                &--categories, &--types, &--thc, &--cbd {
+                    .list {
+                        &-item {
+                            margin-bottom: 15px;
+                        }
+                    }
+                }
+
+
+                &--weight {
+                    .list {
+                        margin-top: -20px;
+
+                        &-item {
+                            margin: 20px 20px 0 0;
+
+                            &:last-of-type {
+                                margin: 20px 0 0;
+                            }
+                        }
+                    }
+
+                }
+
+                &--categories {
+                    padding-top: 0;
+                }
+
+                &:last-of-type {
+                    padding-bottom: 0;
+                }
+
+                &--sale {
+                    padding: 30px;
+                }
+
+                &--sale, &--search {
+                    display: block;
+                }
+            }
+        }
+
+    }
+}

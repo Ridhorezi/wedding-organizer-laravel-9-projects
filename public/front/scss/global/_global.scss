@@ -1,0 +1,376 @@
+/**
+ * Herbalist
+ * Herbalist – is a website template created for selling the cannabis, medical marijuana and CBD products, cannabis blogging and others
+ * Exclusively on https://1.envato.market/herbalist-html
+ *
+ * @encoding        UTF-8
+ * @version         1.0.4
+ * @copyright       (C) 2018 - 2022 Merkulove ( https://merkulov.design/ ). All rights reserved.
+ * @license         Envato License https://1.envato.market/KYbje
+ * @contributors    Lamber Lilit (winter.rituel@gmail.com)
+ * @support         help@merkulov.design
+ **/
+// global template styles
+
+html {
+    &.fixed {
+        overflow-y: hidden;
+    }
+}
+
+
+body {
+    font-family: $bodyFont;
+    color: $text;
+    font-size: 17px;
+    line-height: 1.5;
+    padding: 0 !important;
+}
+
+.container {
+    max-width: 1380px;
+
+    &--narrow {
+        max-width: 895px;
+    }
+}
+
+h1 {
+    font-size: 36px;
+    line-height: 1.1;
+    font-weight: 900;
+}
+
+h2 {
+    font-size: 30px;
+    line-height: 1.3;
+}
+
+h3 {
+    font-size: 24px;
+    line-height: 1.1;
+}
+
+h4 {
+    font-size: 20px;
+    line-height: 1.3;
+}
+
+h5 {
+    font-size: 17px;
+    line-height: 1.3;
+}
+
+h2, h3 {
+    font-weight: 800;
+}
+
+h4, h5 {
+    font-weight: 700;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $accentFont;
+    color: $primary;
+}
+
+.field {
+    border: 1px solid transparent;
+
+    &.error {
+        border-color: red !important;
+    }
+
+    &::placeholder {
+        font-size: 14px;
+    }
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.section {
+    padding: 60px 0;
+
+    &--nopb {
+        padding: 60px 0 0;
+    }
+}
+
+.accent {
+    color: $accent;
+}
+
+.secondary {
+    color: $secondary;
+}
+
+.brand {
+    font-family: $accentFont;
+    font-weight: 900;
+    color: $secondary;
+    font-size: 28px;
+    line-height: 20px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: $accent;
+    color: $primary;
+    border-radius: 24px;
+    padding: 0 25px;
+    font-family: $accentFont;
+    font-weight: 700;
+    font-size: 17px;
+    height: 48px;
+
+    &:hover, &:focus {
+        transform: scale(1.1);
+    }
+
+    &--green {
+        background: transparent;
+        color: $secondary;
+        border: 1px solid $secondary;
+
+        &:hover, &:focus {
+            background: $secondary;
+            color: #fff;
+            transform: none;
+        }
+    }
+
+    &--underline {
+        color: $secondary;
+        font-family: $accentFont;
+        font-weight: 700;
+        font-size: 17px;
+        text-transform: capitalize;
+        position: relative;
+        padding-bottom: 5px;
+
+        &:after {
+            content: '';
+            width: 100%;
+            height: 2px;
+            background: $secondary;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transition: width .3s ease-in-out;
+        }
+
+        &:hover, &:focus {
+            &:after {
+                animation: underline 500ms ease-in-out;
+            }
+        }
+    }
+}
+
+.icon-heart {
+    position: relative;
+    top: 1px;
+}
+
+.collapse {
+    &:not(.show) {
+        display: none;
+    }
+}
+
+.collapsing {
+    height: 0;
+    overflow: hidden;
+    transition: height .3s ease-in-out;
+}
+
+.fade {
+    transition: opacity .15s linear;
+
+    &:not(.show) {
+        opacity: 0;
+    }
+}
+
+
+.swiper-pagination {
+    &--dots {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 40px;
+
+        .swiper-pagination-bullet {
+            width: 12px;
+            height: 12px;
+            background: $primaryHighlight;
+            margin-right: 25px;
+            border-radius: 50%;
+            transition: background-color .3s ease-in-out;
+            cursor: pointer;
+
+            &-active, &:hover {
+                background: $secondary;
+            }
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+.qty {
+    background: #fff;
+    box-shadow: 1px 2px 15px rgba(33, 72, 66, 0.07);
+    border-radius: 24px;
+    padding: 13px 15px;
+    width: 110px;
+    height: 48px;
+    font-family: $accentFont;
+    color: $primary;
+    margin-top: 10px;
+
+    &_amount {
+        max-width: 22px;
+        text-align: center;
+        font-weight: 700;
+        line-height: 1;
+    }
+
+    .control {
+        cursor: pointer;
+
+        &.disabled {
+            color: $gray;
+            cursor: default;
+        }
+    }
+}
+
+.main {
+    &_title {
+        cursor: pointer;
+    }
+
+    &_rating {
+        line-height: 1;
+
+        &-stars {
+            &_star {
+                margin-right: 10px;
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+.offcanvas {
+    position: fixed;
+    bottom: 0;
+    z-index: 20000;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    visibility: hidden;
+    background-color: #fff;
+    background-clip: padding-box;
+    box-shadow: 0 0 15px rgba(37, 143, 103, 0.1);
+    transition: transform .3s ease-in-out;
+
+    &-end {
+        top: 0;
+        right: 0;
+        transform: translateX(100%);
+    }
+
+    &-backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 19000;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(33, 72, 66, 0.5);
+    }
+
+    &.show {
+        transform: none;
+    }
+}
+
+// media queries
+
+@media screen and (min-width: 767.98px) {
+    h1 {
+        font-size: 40px;
+    }
+    .section {
+        padding: 90px 0;
+
+        &--nopb {
+            padding: 90px 0 0;
+        }
+    }
+}
+
+@media screen and (min-width: 991.98px) {
+
+    .section {
+        padding: 160px 0;
+
+        &--nopb {
+            padding: 160px 0 0;
+        }
+    }
+    .swiper-pagination {
+        &--dots {
+            margin-top: 60px;
+        }
+    }
+    h1 {
+        font-size: 56px;
+        line-height: 1.2;
+    }
+
+    h2 {
+        font-size: 36px;
+        line-height: 1.2;
+    }
+
+    h3 {
+        font-size: 28px;
+    }
+
+    h4 {
+        font-size: 22px;
+        line-height: 1.1;
+    }
+
+}
+
+
+// hide google maps footer
+
+a[href^="http://maps.google.com/maps"] {
+    display: none !important
+}
+
+a[href^="https://maps.google.com/maps"] {
+    display: none !important
+}
+
+.gmnoprint a, .gmnoprint span, .gm-style-cc {
+    display: none;
+}
+
+.gmnoprint div {
+    background: none !important;
+}

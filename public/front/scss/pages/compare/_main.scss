@@ -1,0 +1,291 @@
+/**
+ * Herbalist
+ * Herbalist – is a website template created for selling the cannabis, medical marijuana and CBD products, cannabis blogging and others
+ * Exclusively on https://1.envato.market/herbalist-html
+ *
+ * @encoding        UTF-8
+ * @version         1.0.4
+ * @copyright       (C) 2018 - 2022 Merkulove ( https://merkulov.design/ ). All rights reserved.
+ * @license         Envato License https://1.envato.market/KYbje
+ * @contributors    Lamber Lilit (winter.rituel@gmail.com)
+ * @support         help@merkulov.design
+ **/
+// compare list main content
+
+.compare {
+    &_header {
+        margin-bottom: 60px;
+
+        &-title {
+            margin-bottom: 15px;
+        }
+
+        &-action {
+            margin-bottom: 20px;
+
+            &_add {
+                margin-right: 30px;
+                font-family: $accentFont;
+                font-weight: 700;
+                color: $primary;
+
+                &:hover, &:focus {
+                    .icon-wrapper {
+                        transform: scale(1.1);
+                    }
+                }
+
+                .icon-wrapper {
+                    background: #fff;
+                    width: 48px;
+                    height: 48px;
+                    border-radius: 50%;
+                    box-shadow: 0 0 15px rgba(37, 143, 103, 0.1);
+                    font-size: 20px;
+                    color: $secondary;
+                    margin-right: 10px;
+                    transition: all .3s linear;
+                }
+            }
+        }
+
+        &-list {
+            &_item {
+                margin-bottom: 30px;
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+
+                .wrapper {
+                    .media {
+                        height: 200px;
+                        border-radius: 16px;
+                        overflow: hidden;
+                        margin-bottom: 10px;
+                    }
+
+                    .main {
+                        &_title {
+                            display: inline-block;
+                            transition: all .3s ease-in-out;
+                            font-weight: 700;
+                            font-family: $accentFont;
+                            color: $primary;
+                            font-size: 20px;
+                            line-height: 1.3;
+
+                            &:hover, &:focus {
+                                color: $secondary !important;
+                            }
+                        }
+
+                        &_price {
+                            margin: 15px 0;
+
+                            .price {
+                                color: $primary;
+                                font-size: 22px;
+                                line-height: 1.1;
+                                font-weight: 800;
+                                font-family: $accentFont;
+
+                                &--old {
+                                    color: $gray;
+                                    text-decoration: line-through;
+                                    margin-right: 15px;
+                                    font-weight: 700;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &_main {
+        &-header {
+            margin-bottom: 30px;
+        }
+
+        &-list {
+            &_item {
+                border-bottom: 1px solid $gray;
+                padding: 30px 0;
+                color: $primary;
+
+                &:first-of-type {
+                    padding-top: 0;
+                }
+
+                &:last-of-type {
+                    border-bottom: none;
+                    padding-bottom: 0;
+                }
+
+                .property-header {
+                    margin-bottom: 15px;
+                }
+
+                .value-list {
+                    .list-item {
+                        margin-bottom: 10px;
+
+                        &:last-of-type {
+                            margin-bottom: 0;
+                        }
+
+                        .product-title {
+                            margin-bottom: 5px;
+                            font-weight: 600;
+                            font-size: 14px;
+                            color: #807E7E;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// media queries
+
+@media screen and (min-width: 575.98px) {
+    .compare {
+        &_header {
+
+            &-list {
+                margin: 0 -15px;
+
+                &_item {
+                    padding: 0 15px;
+
+                    .wrapper {
+                        height: 100%;
+
+                        .main {
+                            flex-grow: 1;
+
+                            &_title {
+                                flex-grow: 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 767.98px) {
+    .compare {
+        .value-list {
+            margin: 0 -15px;
+
+            .list-item {
+                padding: 0 15px;
+            }
+        }
+
+        &_header {
+            &-list {
+                &_item {
+                    margin-bottom: 40px;
+
+                    .wrapper {
+                        .media {
+                            width: 80px;
+                            height: 80px;
+                            margin-bottom: 0;
+                            margin-right: 20px;
+
+                            img {
+                                height: 100%;
+                            }
+                        }
+
+                        .main {
+                            width: calc(100% - 110px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 991.98px) {
+    .compare {
+        &_header {
+            &-title, &-action {
+                margin-bottom: 0;
+            }
+
+            &-list {
+                margin-top: 40px;
+                width: 100%;
+
+                &_item {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1199.98px) {
+    .compare {
+        &.value-list {
+            margin: 0 -20px;
+
+            .list-item {
+                padding: 0 20px;
+            }
+        }
+
+        &_header {
+            &-list {
+                margin: 30px -20px 0;
+
+                &_item {
+                    padding: 0 20px;
+
+                    .wrapper {
+                        .media {
+                            width: 193px;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1399.98px) {
+    .compare {
+        &_header {
+            &-list {
+                &_item {
+                    .wrapper {
+                        .media {
+                            height: 146px;
+                            margin-bottom: 0;
+                            margin-right: 40px;
+
+                            img {
+                                width: auto;
+                                height: 100%;
+                            }
+                        }
+
+                        .main {
+                            width: min-content;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,165 @@
+/**
+ * Herbalist
+ * Herbalist – is a website template created for selling the cannabis, medical marijuana and CBD products, cannabis blogging and others
+ * Exclusively on https://1.envato.market/herbalist-html
+ *
+ * @encoding        UTF-8
+ * @version         1.0.4
+ * @copyright       (C) 2018 - 2022 Merkulove ( https://merkulov.design/ ). All rights reserved.
+ * @license         Envato License https://1.envato.market/KYbje
+ * @contributors    Lamber Lilit (winter.rituel@gmail.com)
+ * @support         help@merkulov.design
+ **/
+// featured products section
+
+.featured {
+    &_header {
+        text-align: center;
+        margin-bottom: 30px;
+
+        &-title {
+            margin-bottom: 15px;
+        }
+
+        &-text {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+    }
+
+    &_btn {
+        display: flex;
+        width: fit-content;
+        margin: 40px auto 0;
+    }
+}
+
+.products {
+    &_list {
+        grid-gap: 30px;
+
+        &-item {
+            margin: 0;
+        }
+
+        &-promo {
+            background: $pastelYellow;
+            padding: 30px;
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            text-align: center;
+
+            .overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: $pastelYellow;
+                mix-blend-mode: darken;
+                z-index: 1;
+            }
+
+            .content {
+                position: relative;
+                z-index: 2;
+            }
+
+            &_text {
+                margin: 15px 0 30px;
+            }
+
+            .timer {
+                &_block {
+                    margin-right: 5px;
+                    border-radius: 8px;
+                    min-width: 60px;
+                    height: 60px;
+                    background: $secondary;
+                    color: #fff;
+                    text-align: center;
+                    padding: 5px;
+                    font-size: 14px;
+                    text-transform: capitalize;
+
+                    &:last-of-type {
+                        margin-right: 0;
+                    }
+
+                    &-number {
+                        font-size: 24px;
+                        line-height: 1.1;
+                        font-family: $accentFont;
+                        font-weight: 800;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// media queries
+
+@media screen and (min-width: 575.98px) {
+    .products {
+        &_list {
+            grid-template-columns: repeat(2, 1fr);
+            margin: 0;
+
+            &-item {
+                padding: 0;
+            }
+
+            &-promo {
+                grid-area: 4 / 1 / 5 / 3;
+                padding: 30px;
+                background: url("../img/placeholder.jpg") center no-repeat / cover;
+                text-align: left;
+
+                &_text {
+                    max-width: 426px;
+                }
+
+                .timer {
+                    &_block {
+                        margin-right: 15px;
+                        width: 80px;
+                        height: 72px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 991.98px) {
+    .featured {
+        &_header {
+            margin-bottom: 40px;
+        }
+    }
+    .products {
+        &_list {
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 40px;
+
+            &-promo {
+                grid-area: 3 / 1 / 4 / 3;
+                padding: 40px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1399.98px) {
+    .products {
+        &_list {
+            grid-template-columns: repeat(4, 1fr);
+
+            &-promo {
+                grid-area: 2 / 3 / 3 / 5;
+            }
+        }
+    }
+}

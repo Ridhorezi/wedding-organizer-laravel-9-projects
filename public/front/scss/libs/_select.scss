@@ -1,0 +1,93 @@
+/**
+ * Herbalist
+ * Herbalist – is a website template created for selling the cannabis, medical marijuana and CBD products, cannabis blogging and others
+ * Exclusively on https://1.envato.market/herbalist-html
+ *
+ * @encoding        UTF-8
+ * @version         1.0.4
+ * @copyright       (C) 2018 - 2022 Merkulove ( https://merkulov.design/ ). All rights reserved.
+ * @license         Envato License https://1.envato.market/KYbje
+ * @contributors    Lamber Lilit (winter.rituel@gmail.com)
+ * @support         help@merkulov.design
+ **/
+@import "../base/variables";
+
+.custom-select {
+    &-container {
+        position: relative;
+        min-width: 160px;
+        &.is-disabled {
+            opacity: .3;
+        }
+        &.is-open {
+            .custom-select-panel {
+                max-height: 15em;
+                overflow-y: auto;
+                margin-top: 10px;
+            }
+        }
+        select {
+            visibility: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+    &-opener {
+        position: relative;
+        display: block;
+        cursor: pointer;
+        width: 100%;
+        text-align: right;
+        font-weight: 600;
+        color: $primary;
+        border-right: none;
+        border-top: none;
+        transition: all .3s ease-in-out;
+        &:hover, &:focus {
+            color: $secondary;
+        }
+    }
+    &-panel {
+        max-height: 0;
+        transition: max-height .5s ease-out, margin-top .5s ease-in-out;
+        overflow: hidden;
+        background: #FFFFFF;
+        box-shadow: 0 0 15px rgba(37, 143, 103, 0.07);
+        border-radius: 8px;
+        position: absolute;
+        top: 100%;
+        z-index: 1;
+        width: 100%;
+
+        /* ===== Scrollbar CSS ===== */
+
+        /* Firefox */
+        scrollbar-width: auto;
+        scrollbar-color: #fff #fff;
+
+        /* Chrome, Edge, and Safari */
+        &::-webkit-scrollbar {
+            width: 2px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: #fff;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: #fff;
+            border-radius: 0;
+            border: 0 solid #fff;
+        }
+    }
+    &-option {
+        padding: 10px 15px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all .3s ease-in-out;
+        &.is-selected, &.has-focus  {
+            color: $secondary;
+        }
+    }
+}

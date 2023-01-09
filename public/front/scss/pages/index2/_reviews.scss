@@ -1,0 +1,132 @@
+/**
+ * Herbalist
+ * Herbalist – is a website template created for selling the cannabis, medical marijuana and CBD products, cannabis blogging and others
+ * Exclusively on https://1.envato.market/herbalist-html
+ *
+ * @encoding        UTF-8
+ * @version         1.0.4
+ * @copyright       (C) 2018 - 2022 Merkulove ( https://merkulov.design/ ). All rights reserved.
+ * @license         Envato License https://1.envato.market/KYbje
+ * @contributors    Lamber Lilit (winter.rituel@gmail.com)
+ * @support         help@merkulov.design
+ **/
+// reviews section
+
+.reviews {
+    position: relative;
+    &_underlay {
+        position: absolute;
+        width: 470px;
+        height: 450px;
+        opacity: 0.7;
+        transform: rotate(-20deg);
+        right: 0;
+        bottom: 0;
+        &-circle {
+            display: block;
+            width: 384px;
+            height: 384px;
+            filter: blur(136px);
+            transform: rotate(-20deg);
+            position: absolute;
+            &--green {
+                background: rgba(158, 188, 166, 0.2);
+                top: 0;
+                right: 0;
+            }
+            &--yellow {
+                background: rgba(239, 195, 104, 0.1);
+                bottom: 0;
+                left: 0;
+            }
+        }
+    }
+    &_header {
+        text-align: center;
+        margin-bottom: 30px;
+
+        &-title {
+            margin-bottom: 15px;
+        }
+
+        &-text {
+            max-width: 475px;
+            margin: 0 auto;
+        }
+    }
+
+    &_slider {
+        &-slide {
+            padding: 15px;
+            height: auto;
+
+            &_wrapper {
+                height: 100%;
+                background: #fff;
+                box-shadow: 0 0 15px rgba(37, 143, 103, 0.1);
+                border-radius: 24px;
+                padding: 30px;
+
+                .avatar {
+                    width: 80px;
+                    height: 80px;
+                    border-radius: 50%;
+                    margin-bottom: 30px;
+                }
+
+                .rating {
+                    line-height: 1;
+                    &_star {
+                        margin-right: 10px;
+                        font-size: 20px;
+
+                        &:last-of-type {
+                            margin-right: 0;
+                        }
+                    }
+                }
+
+                .text {
+                    margin-top: 10px;
+                    text-align: center;
+                    flex-grow: 1;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+}
+
+// media queries
+
+@media screen and (min-width: 767.98px) {
+    .reviews {
+        &_slider {
+            margin: -10px;
+
+            &-slide {
+                padding: 10px;
+                height: auto;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 991.98px) {
+    .reviews {
+        &_header {
+            margin-bottom: 40px;
+        }
+
+        &_slider {
+            &-slide {
+                &_wrapper {
+                    padding: 40px;
+                    .text {
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

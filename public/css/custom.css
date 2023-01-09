@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,800&display=swap');
+body{
+  font-family: ' Open Sans',sans-serif;
+}
+.titleSection{
+  font-size:3rem;
+}
+.form-control.login{
+  border-radius: 1.25rem;
+  padding:.7rem;
+  padding-left: 2rem;
+  width:70%;
+  border:1px solid black;
+  box-shadow: 0px 3px 3px 0px #b5bcb5;
+}
+.form-control.login::placeholder{
+  font-style: italic;
+}
+.btn.login{
+  border-radius: 1.25rem;
+  padding-left:2rem;
+  padding-right:2rem;
+  font-weight: 500;
+  background:#202A53;
+  color: white;
+}
+.logoTahuNgoding{
+  width:2.5rem;
+}
+.textCopy{
+  font-size:1.5rem;
+  color:grey;
+  font-style: italic;
+}
+.wrapperForm{
+  margin-top:2.5rem;
+}
+.ilustratorImg{
+  width:70%;
+}
+@media only screen and (max-width: 768px) {
+  .ilustratorImg{
+    width:50%;
+  }
+  .titleSection{
+    font-size:2.2rem;
+  }
+  .wrapperForm{
+    margin-top:1.5rem;
+  }
+}
+
+
+.candidateImgOne{
+  border:8px solid yellow;
+  border-radius:50%;
+  box-shadow:-10px 10px 5px 0px #b5bcb5;
+}
+.candidateImgTwo{
+  border:8px solid #7141D8;
+  border-radius:50%;
+  box-shadow:10px 10px 5px 0px #b5bcb5;
+}
+.candidateImgThree{
+  border:8px solid #202A53;
+  border-radius:50%;
+  box-shadow:10px 10px 5px 0px #b5bcb5;
+}
+.wrapperCandidateOne{
+  border:5px solid yellow;
+  border-radius:2.5rem;
+  box-shadow: -10px 10px 5px 0px #B5BCB5;
+  cursor: pointer;
+}
+.wrapperCandidateTwo{
+  border:5px solid #7141D8;
+  border-radius:2.5rem;
+  box-shadow: 0px 10px 5px 0px #B5BCB5;
+  cursor: pointer;
+}
+.wrapperCandidateThree{
+  border:5px solid #202A53;
+  border-radius:2.5rem;
+  box-shadow: 10px 10px 5px 0px #B5BCB5;
+  cursor: pointer;
+}
+
+.modal-dialog.custom{
+  max-width: 80%;
+}
+.modal-content.custom{
+  border-radius:2rem;
+}
+
+
+.listSOP li{
+  font-size:1.5rem;
+}
+
+.logoDone{
+  width:20%;
+  margin-top:1rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .modal-dialog.custom{
+    max-width: 100%;
+  }
+  .listSOP li{
+    font-size:1rem;
+  }
+  .logoDone{
+    width:50%;
+    margin-top:5rem;
+  }
+}
+
+
+
+
+/* reusable */
+/* all device */
+.wFull{
+  width:100%;
+}
+
+.w60{
+  width:60%;
+}
+
+.mt5{
+  margin-top:5rem;
+}
+
+/* minimal medium device */
+@media only screen and (min-width: 768px) {
+  .mtMd1c5{
+    margin-top:1.5rem;
+  }
+  .mtMd0c4{
+    margin-top: .4rem;
+  }
+  .mtBtnPilih{
+    margin-top:8rem;
+  }
+  
+  .spacingM0c3{
+    letter-spacing: .3rem;
+  }
+
+  .spacingM0c2{
+    letter-spacing: .2rem;
+  }
+
+  .fSM4{
+    font-size:4rem!important;
+  }
+
+  .fSM2C5{
+    font-size:2.5rem!important;
+  }
+
+  .mtM10{
+    margin-top:10%;
+  }
+
+  .wM80{
+    width:80%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .mtBtnPilih{
+    margin-top:3rem;
+  }
+  .fSMBL1C2{
+    font-size:1.2rem;
+  }
+}
+
+
+/* .sectionFormLogin{
+  margin-top: 7%;
+}
+.wrapperForm{
+  width:90%;
+  border-radius:1.2rem;
+  background-color: rgb(211,211,211,0.8)
+}
+.form-control.login{
+  border-radius: 1.25rem;
+  padding:.7rem;
+  padding-left: 2rem;
+}
+.form-control.login::placeholder{
+  font-style: italic;
+}
+.btn.login{
+  border-radius: 1.25rem;
+  padding-left:2rem;
+  padding-right:2rem;
+  font-weight: 500;
+}
+.whiteLine{
+  width: 100%;
+  height:1px;
+  background-color: white;
+  margin-top:6rem;
+}
+.logoStmik{
+  width:35%;
+}
+.titleEvent{
+    font-weight: 600;
+    text-shadow: 1.5px 1.5px 2.5px black;
+    line-height: 2.5rem;
+}
+.textCopyRight{
+    text-shadow: 1px 1px 2px black;
+}
+
+@media only screen and (max-width: 992px) {
+  .titleEvent{
+    font-size:1.2rem;
+    line-height: 1.5rem;
+  }
+  .logoStmik{
+    width:40%;
+  }
+} */

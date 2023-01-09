@@ -1,0 +1,276 @@
+/**
+ * Herbalist
+ * Herbalist – is a website template created for selling the cannabis, medical marijuana and CBD products, cannabis blogging and others
+ * Exclusively on https://1.envato.market/herbalist-html
+ *
+ * @encoding        UTF-8
+ * @version         1.0.4
+ * @copyright       (C) 2018 - 2022 Merkulove ( https://merkulov.design/ ). All rights reserved.
+ * @license         Envato License https://1.envato.market/KYbje
+ * @contributors    Lamber Lilit (winter.rituel@gmail.com)
+ * @support         help@merkulov.design
+ **/
+// newsletter component
+
+.newsletter {
+    .wrapper {
+        background: url("../img/placeholder.jpg") repeat center, $primary / cover;
+        background-blend-mode: overlay;
+        color: #fff;
+        text-align: center;
+        border-radius: 16px;
+        padding: 30px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    &_deco {
+        display: none;
+    }
+
+    &_header {
+        margin-bottom: 30px;
+
+        &-title {
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        &-text {
+            max-width: 474px;
+            margin: 0 auto;
+        }
+    }
+
+    &_form {
+        &-field {
+            background: #fff;
+            border-radius: 23px;
+            padding: 13px 30px;
+            margin-bottom: 10px;
+            color: $text;
+
+            &::placeholder {
+                transition: opacity .3s ease-in-out;
+                font-size: 14px;
+                line-height: 22px;
+            }
+
+            &:focus {
+                &::placeholder {
+                    opacity: 0;
+                }
+            }
+        }
+
+        &-field, &-btn {
+            width: 100%;
+            height: 48px;
+        }
+    }
+}
+
+// media queries
+
+@media screen and (min-width: 575.98px) {
+    .newsletter {
+        .wrapper {
+            padding: 30px;
+        }
+
+        &_form {
+            position: relative;
+            max-width: 341px;
+            margin: 0 auto;
+
+            &-field {
+                padding: 13px 141px 13px 30px;
+                margin-bottom: 0;
+            }
+
+            &-btn {
+                position: absolute;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                width: 111px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 767.98px) {
+    .newsletter {
+        .wrapper {
+            padding: 60px;
+        }
+
+        &_content {
+            position: relative;
+            z-index: 100;
+        }
+
+        &_deco {
+            position: absolute;
+            display: block;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+
+            &-wrapper {
+                width: 582px;
+                height: 664px;
+                position: absolute;
+                z-index: 2;
+                mix-blend-mode: darken;
+
+                &:first-of-type {
+                    left: 0;
+                    bottom: 0;
+                }
+
+                &:last-of-type {
+                    right: 0;
+                    bottom: 0;
+                }
+
+                .leaf {
+                    position: absolute;
+                    bottom: 0;
+
+                    &--left {
+                        left: -30%;
+                    }
+
+                    &--right {
+                        right: -40%;
+                        bottom: -35%;
+                    }
+                }
+
+            }
+        }
+
+        &_highlight {
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+
+            .underlay {
+                &_circle {
+                    filter: blur(136px);
+                    position: absolute;
+
+                    &--accent {
+                        background: rgba($accent, 0.1);
+                        width: 388px;
+                        height: 337px;
+                        left: -18%;
+                        top: 56%;
+                    }
+
+                    &--green {
+                        background: rgba(158, 188, 166, 0.2);
+                    }
+
+                    &--small {
+                        width: 372px;
+                        height: 372px;
+                        bottom: 0;
+                    }
+
+                    &--big {
+                        width: 597px;
+                        height: 597px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 991.98px) {
+    .newsletter {
+        .wrapper {
+            padding: 80px;
+        }
+
+    }
+}
+
+@media screen and (min-width: 1199.98px) {
+    .newsletter {
+
+        &_deco {
+
+            &-wrapper {
+
+                .leaf {
+
+
+                    &--left {
+                        left: 0;
+                    }
+
+                    &--right {
+                        right: -12%;
+                        bottom: -50%;
+                    }
+                }
+            }
+        }
+
+        &_highlight {
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+
+            .underlay {
+                position: absolute;
+                display: inline-block;
+                z-index: 1;
+
+                &--left {
+                    width: 548px;
+                    height: 548px;
+                    top: 60%;
+                }
+
+                &--right {
+                    width: 490px;
+                    height: 560px;
+                    right: 0;
+                }
+
+                &_circle {
+                    filter: blur(135px);
+                    display: block;
+
+                    &--accent {
+                        background: rgba($accent, 0.1);
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    &--green {
+                        background: rgba(158, 188, 166, 0.2);
+                    }
+
+                    &--small {
+                        width: 372px;
+                        height: 372px;
+                        bottom: 0;
+                    }
+
+                    &--big {
+                        width: 597px;
+                        height: 597px;
+                    }
+                }
+            }
+        }
+    }
+}
